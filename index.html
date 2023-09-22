@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <META name="Author" lang="zh" content="Lionel Sanchez">
+    <link rel="Shortcut Icon" href="./imgs/icon.png" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Adpated from Sesena_Bus by snLionel90" />
+
+    <title>HKU Shuttle Bus</title>
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+        body {
+            background-image: url('./imgs/background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 768px) {
+            /* Add responsive styles for screens smaller than 768px */
+            body {
+                background-image: none;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="./css/global_styles.css" type="text/css">
+    <link rel="stylesheet" href="./css/id_and_class_style.css" type="text/css">
+
+    <script src="./js/time_set.js" type="text/javascript"></script>
+    <script src="./js/select_line.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <center>
+        <!--Div para el panel de navegacion-->
+        <div>
+            <table>
+                <tr>
+                    <td><p>香港大学内地本科生权益保障组</p></td>
+                    <td>
+                        <a href="https://richku.com/">
+                            <img src="./imgs/logo.PNG" width="50%"/>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Tabal de fecha y hora-->
+        <table class="date">
+            <tr>
+                <td>
+                    <label id="reloj"></label>
+                    <script></script>
+                </td>
+            </tr>
+        </table>
+
+        <!-- marco para la pagina-->
+        <div id="pagina">
+            <div id="contenido">
+                <h1>欢迎来到HKU校巴查询网站</h1>
+            </div>
+            <form>
+                <p><h3>选择要查找的路线</h3></p>
+                <button><a href="./doc/mapa.html">ver mapa de la red</a></button>
+                <select name="bus_lines" onchange="eligeLinea(this.form)">
+                    <option selected>选择城市</option>
+                    <option>Hong Kong</option>
+                </select>
+                <select name="lista_lineas" onchange="mostrarImagen(this.form)">
+                    <option></option>
+                </select>
+                <div><img style="display: none" name="imagen" id="imagen" alt="Failed to load image"></div>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
