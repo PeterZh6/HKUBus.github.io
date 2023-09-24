@@ -2,7 +2,7 @@
 <head>
     <title>校巴路线图</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Google map bus route drawn by myself" />
+    <meta name="description" content="Google map bus route drawn by myself. Details just for demo" />
     <link rel="stylesheet" href="../css/map.css" type="text/css">
     <script>
         function loadMap() {
@@ -22,7 +22,6 @@
                 mapUrl = "../asset/illustrations/under_construction.svg";
             }
 
-            // 使用选定的地图URL加载地图
             var iframe = document.getElementById("mapFrame");
             iframe.src = mapUrl;
         }
@@ -37,9 +36,9 @@
 <body style="background-image: url('../imgs/mapBackground.jpg');background-size: auto;">
     <div style="text-align: center;">
         <h1>Bus Route Map</h1>
-        <button class="volver"><a href="../index.html">返回主菜单</a></button>
-        <div>
-            <select id="routeSelect" onchange="loadMap()">
+        <button class="volver" style="font-size: 20px;"><a href="../index.html">返回主菜单</a></button>
+       
+            <select id="routeSelect" onchange="loadMap()" style="font-size: 20px;">
                 <option value="Route 1">Route 1</option>
                 <option value="Route 1a">Route 1a</option>
                 <option value="Route 2">Route 2</option>
@@ -47,7 +46,7 @@
                 <option value="Route 4">Route 4</option>
             </select>
             <iframe id="mapFrame" width="100%" height="80%"></iframe>
-        </div>
+        
     </div>
 </body>
 </html>
